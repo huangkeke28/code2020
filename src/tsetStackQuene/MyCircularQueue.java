@@ -6,7 +6,7 @@ public class MyCircularQueue {
     public int[] array;
     public int size = 0;
     public int head = 0;
-    public int tail = -1;
+    public int tail = 0;
     public MyCircularQueue(int k) {
         array = new int[k];
     }
@@ -23,14 +23,17 @@ public class MyCircularQueue {
         if (size == 0) {
             return -1;
         }
-        return array[tail];
+        if (tail - 1 == -1  ) {
+            return array[array.length - 1];
+        }
+        return array[tail - 1];
     }
     public boolean enQueue(int value) {
         if (size >= array.length) {
             return false;
         }
-        tail++;
         array[tail] = value;
+        tail++;
         if (tail >= array.length) {
             tail = 0;
         }
