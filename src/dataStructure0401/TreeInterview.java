@@ -257,7 +257,7 @@ public class TreeInterview {
                 queue.offer(cur.left);
             }
             if (cur.right != null) {
-                queue.offer(cur.right);
+                queue.offer(cur.right);     
             }
         }
 
