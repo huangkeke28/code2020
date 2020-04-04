@@ -60,7 +60,7 @@ public class TreeInterviewTest {
         if (level == result.size()) {
             result.add(new ArrayList<>());
         }
-        result.get(level).add(root.val);
+        //!!!!!//result.get(level).add(root.val);
         if (root.left != null) {
             helper(root.left, level + 1);
         }
