@@ -35,7 +35,7 @@ public class Solution {
                 queue.offer(new Pair(nums1[i], nums2[j]));
             }
         }
-        for (int i = 0; i < k && queue.isEmpty(); i++) {
+        for (int i = 0; i < k && !queue.isEmpty(); i++) {
             Pair cur = queue.poll();
             List<Integer> temp = new ArrayList<>();
             temp.add(cur.n1);
