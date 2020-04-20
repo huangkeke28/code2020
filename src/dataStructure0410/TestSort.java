@@ -11,6 +11,8 @@ public class TestSort {
     //插入排序的两个重要特点
     //a. 当待排序元素区间比较少时,排序效率很高
     //b. 当整个数组比较接近有序的时候,排序效率也很高
+
+    //每次取待排序区间的第一个元素 往前面的有序区间中插入 和顺序表插入类似(搬运)
     public static void insertSort(int[] array) {
         //bound来划分出两个区间
         for (int bound = 1; bound < array.length; bound++) {
